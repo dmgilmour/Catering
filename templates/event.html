@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<a href="../../logout">Logout</a>
+&nbsp;
+&nbsp;
+<a href="..">Go Back</a>
+
+
+<h3>Create new Event</h3>
+
+{% if message %}
+    <h4>{{ message }}</h4>
+{% else %}
+    <br>
+{% endif %}
+
+<form action="" method="post">
+    Event Name: <input type="text" name="name"  />
+    <br>
+    Date: <input type="date" name="date"  />
+    <br>
+    <input type="submit" value="submit"  />
+</form>
+
+{% endblock %}

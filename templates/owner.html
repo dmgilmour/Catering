@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <a href="../logout">Logout</a>
+    &nbsp;
+    &nbsp;
+    <a href="register">Register New Staff</a>
+    <br>
+
+    {% if event_list %}
+        <br><br><br>
+        <table>
+            <tr>
+                <th>Event Name&nbsp;&nbsp;&nbsp;</th>
+                <th>Event Date&nbsp;&nbsp;&nbsp;</th>
+                <th>Staff&nbsp;</th>
+            </tr>
+
+            {% for event in event_list %}
+                <tr>
+                    <td><br>{{ event.name }}<br></td>
+                    <td><br>{{ event.date }}<br></td>
+                    <td>
+                        {% if event.staff_list|length > 0 %}
+                            <br>
+                            {% for staff in event.staff_list %}
+                                {{ staff.name}} <br>
+                            {% endfor %}
+                        {% else %}
+                            <br>Currently Unstaffed<br>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <br>No upcoming events<br>
+    {% endif %}
+
+{% endblock %}
+        

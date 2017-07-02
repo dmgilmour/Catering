@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <a href="../logout">Logout</a>
+        <h3>Events Attending</h3>
+
+    <table>
+        <tr>
+            <th>Event Name&nbsp;&nbsp;&nbsp;</th>
+            <th>Event Date&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <hr>
+
+        {% for event in events_attending %}
+            <tr>
+                <td><br>{{ event.name }}<br></td>
+                <td><br>{{ event.date }}<br></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <br>
+
+
+
+    <h3>Events Attendable</h3>
+    <table>
+        <tr>
+            <th>Event Name&nbsp;&nbsp;&nbsp;</th>
+            <th>Event Date&nbsp;&nbsp;&nbsp;</th>
+            <th>Sign Up&nbsp;</th>
+        </tr>
+        <hr>
+
+        {% for event in events_attendable %}
+            <tr>
+                <td><br>{{ event.name }}<br></td>
+                <td><br>{{ event.date }}<br></td>
+                <td><br>
+                    <form action="" method="post">
+                        <button name="{{ event.name }}" value="{{ event.name }}">Join</button>
+                    </form>
+                <br></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+        

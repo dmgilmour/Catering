@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <a href="../logout">Logout</a>
+    &nbsp;
+    &nbsp;
+    <a href="event">Create a New Event</a>
+
+    {% if events %}
+        <table>
+            <tr>
+                <th>Event Name&nbsp;&nbsp;&nbsp;</th>
+                <th>Event Date&nbsp;&nbsp;&nbsp;</th>
+                <th>Cancel&nbsp;</th>
+            </tr>
+
+            {% for event in events %}
+                <tr>
+                    <td><br>{{ event.name }}<br></td>
+                    <td><br>{{ event.date }}<br></td>
+                    <td><br>
+                        <form action="" method="post">
+                            <button name="{{ event.name }}" value="{{ event.name }}">Cancel</button>
+                        </form>
+                    <br></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <br>You have no upcoming events<br>
+    {% endif %}
+
+{% endblock %}
+        
