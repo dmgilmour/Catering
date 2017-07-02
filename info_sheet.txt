@@ -6,50 +6,38 @@ You must submit an information sheet with every assignment. Also be sure
 to submit all materials following the procedures described on the
 submission procedures page.
 
-Name:  
+Name:  Dan Gilmour
 
-Lecture section:  
+Lecture section:  Monday and Wednesday at 2:30
 
-Recitation day and time:  
+Recitation day and time:  Wednesday at 1:30
 
-Assignment #:  
+Assignment #:  2
 
-Program due date:  
+Program due date:  July 3rd
 
-Handed in date:  
+Handed in date:  July 2nd
 
-Source code file name(s):
-
-
-
-
-
+Source code file name(s): catering.py
 
 
 Other file name(s) (if relevant):
 
+base.html
+login.html
+logout.html
+signup.html
+owner.html
+staff.html
+customer.html
+register.html
+event.html
 
 
-
-
-
-
-Does your project run without error?:
+Does your project run without error?: Yes
 
 If not, what is/are the error(s) and which parts of your program run
 correctly?:
 
 
-
-
-
-
-
 Additional comments to the grader:
-
-
-
-
-
-
-
